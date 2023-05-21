@@ -1,0 +1,23 @@
+import java.util.*;
+class Main {
+  public static void main (String args[]){
+    Scanner t = new Scanner(System.in);
+    System.out.println("Enter A Number");
+    int n = t.nextInt();
+    int c = 0;
+    int rem;
+    while(n > 1){
+      while(n != 0){
+        rem = n%10;
+        c+= (rem*rem);
+        n/=10;
+      }
+      n = c;
+      c = 0;
+      }
+      if (n == 1)
+        System.out.println("it's a happy no");
+      else
+        System.out.println("it's not a Happy no");
+  }
+}
